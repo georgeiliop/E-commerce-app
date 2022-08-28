@@ -1,0 +1,150 @@
+@import "../../global.scss";
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: $mainColor;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    .left {
+      display: flex;
+      align-items: center;
+      .links--container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+        flex: 1;
+        padding: 18px;
+
+        .nav--link {
+          font-size: 26px;
+          transition: all 0.5s ease;
+          cursor: pointer;
+
+          &:hover {
+            color: $secColor;
+          }
+        }
+      }
+
+      .burgerMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 25px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          border-radius: 10px;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    .middle {
+      .logo--link {
+        transition: all 0.5s ease;
+        .logo {
+          font-size: 52px;
+          color: inherit;
+          display: flex;
+        }
+
+        &:hover {
+          color: $secColor;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      .links--container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+        flex: 1;
+        padding: 20px;
+
+        .nav--link {
+          font-size: 26px;
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $secColor;
+          }
+        }
+      }
+    }
+  }
+  &.notActive {
+    .burgerMenu {
+      &:hover {
+        transform: scale(0.85);
+        span {
+          &:first-child {
+            // transform: translatey(2px);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            // transform: translatey(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+
+    .burgerMenu {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+      &:hover {
+        span {
+          &:first-child {
+            background-color: $secColor;
+          }
+          &:last-child {
+            background-color: $secColor;
+          }
+        }
+      }
+    }
+  }
+}

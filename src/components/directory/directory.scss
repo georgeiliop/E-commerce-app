@@ -1,6 +1,17 @@
+@import "../../global.scss";
+
 .categories-container {
-  width: 100%;
+  width: 80%;
+  height: 120vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
+  margin-bottom: 200px;
+
+  @include mobile {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }

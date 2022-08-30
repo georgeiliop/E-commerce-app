@@ -1,3 +1,5 @@
+@import "./global.scss";
+
 body {
   margin: 0;
   font-family: "Bebas Neue", cursive;
@@ -5,7 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
-    display: none;
+    width: 10px; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(
+      128,
+      128,
+      128,
+      0.644
+    ); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid white;
   }
 }
 

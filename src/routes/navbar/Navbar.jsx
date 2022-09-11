@@ -30,7 +30,7 @@ const Navbar = ({ showMenu, setShowMenu }) => {
           </div>
           <div className="right">
             <div className="links--container">
-              <Link className="nav--link" to="/signIn">
+              <Link className="nav--link" to="/authentication">
                 Sign in
               </Link>
             </div>

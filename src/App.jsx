@@ -5,12 +5,9 @@ import Footer from "./components/footer/Footer";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Authentication from "./routes/authentication/Authentication";
+import Shop from "./routes/shop/Shop";
 
 const App = () => {
-  const Shop = () => {
-    return <h1>I am a shop</h1>;
-  };
-
   const [showMenu, setShowMenu] = useState(false);
 
   return (
